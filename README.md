@@ -1,7 +1,7 @@
 USDA nutrition scraper
 ---------
 
-These scripts are to take all information from the [USDA National Nutrient Database](http://ndb.nal.usda.gov/ndb/search) put them into a single file and then ultimately into a smaller SQLite representation
+These scripts are to take all information from the [USDA National Nutrient Database](http://ndb.nal.usda.gov/ndb/search) put them into a single file and then ultimately into a smaller SQLite representation. [Here's the accompanying blog post](http://skorulis.github.io/skorulis-blog/ios/nutrition/2016/01/10/food-nutrition.html)
 
 Usage
 ----
@@ -17,3 +17,10 @@ Then repeatedly call with enough time between calls to fill the JSON file. It sh
 Once this is done create a new SQLite database called nutrition.db and run the provided SQL to setup the schema
 
 `ruby fillDB.rb`
+
+
+Notice
+-----
+I am not a ruby developer, I just use it to write small throwaway scripts so don't expect this to be high quality code.
+
+
