@@ -1,7 +1,11 @@
 require 'json'
 require "sqlite3"
 
-db = SQLite3::Database.open "nutrition.db"
+database = SQLite3::Database.new "nutrition.db"
+
+File.readlines('schema.sql').each do |line|
+	database.execute(line)
+end
 
 @allItems = JSON.parse(File.read("items.js"))
 
@@ -49,20 +53,31 @@ puts "nutrient count " + @nutrientCount.to_s
 puts "unique " + @nutrients.count.to_s
 
 @nutrients.each do |key,nut|
-	db.execute 'INSERT INTO "nutrient" (id,name,nutrientGroup,baseUnit) VALUES (?,?,?,?)',[nut["id"],nut["name"],nut["group"],nut["unit"]]
+	database.execute 'INSERT INTO "nutrient" (id,name,nutrientGroup,baseUnit) VALUES (?,?,?,?)',[nut["id"],nut["name"],nut["group"],nut["unit"]]
 end
 
 @categories.each do |key,cat|
-	db.execute 'INSERT INTO "food_category" (id,name) VALUES (?,?)',[cat["id"],cat["name"]]
+	database.execute 'INSERT INTO "food_category" (id,name) VALUES (?,?)',[cat["id"],cat["name"]]
 end
 
+@createdNutrientCount = 0
+
 @allItems.each_with_index { |food,index|
-	cat = @categories[food["cat"]]
-	db.execute 'INSERT INTO "food" (id,name,category_id) VALUES (?,?,?)',[index+1,food["name"],cat["id"]]
-	for nut in food["nutrients"]
-		nutDB = @nutrients[nut["name"]]
-		db.execute 'INSERT INTO "food_nutrient" (food_id,nutrient_id,quantity) VALUES (?,?,?)',[index+1,nutDB["id"],nut["value"]]
+	database.transaction do |db|
+		cat = @categories[food["cat"]]
+		db.execute 'INSERT INTO "food" (id,name,category_id) VALUES (?,?,?)',[index+1,food["name"],cat["id"]]
+		for nut in food["nutrients"]
+			nutDB = @nutrients[nut["name"]]
+			if nut["value"] > 0
+				db.execute 'INSERT INTO "food_nutrient" (food_id,nutrient_id,quantity) VALUES (?,?,?)',[index+1,nutDB["id"],nut["value"]]
+				@createdNutrientCount = @createdNutrientCount + 1
+			end
 	end
+	
+	end
+	
 }
 
-db.close
+puts "created " + @createdNutrientCount.to_s + " nutrient entries"
+
+database.close

@@ -14,7 +14,7 @@ Then repeatedly call with enough time between calls to fill the JSON file. It sh
 
 `ruby getFoods.rb [APIKey] [callCount]`
 
-Once this is done create a new SQLite database called nutrition.db and run the provided SQL to setup the schema
+Once this is done run the fillDB script which will create and fill the SQLite database. This may take a while
 
 `ruby fillDB.rb`
 
