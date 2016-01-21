@@ -1,6 +1,7 @@
 require 'json'
 require "sqlite3"
 
+File.delete("nutrition.db") if File.exist?("nutrition.db")
 database = SQLite3::Database.new "nutrition.db"
 
 File.readlines('schema.sql').each do |line|

@@ -1,0 +1,228 @@
+[
+	{
+		"name":"Total lipid (fat)",
+		"displayName":"Fat",
+		"displayCategory":"Macro Nutrients",
+		"dv":65,
+		"priority":900,
+		"facts":[
+			{
+				"fact":"wikipedia",
+				"url":"https://en.wikipedia.org/wiki/Fat"
+			}
+		]
+	},
+	{
+		"name":"Energy",
+		"displayCategory":"Macro Nutrients",
+		"dv":8700,
+		"priority":1000,
+		"facts":[
+			{
+				"fact":"wikipedia",
+				"url":"https://en.wikipedia.org/wiki/Food_energy"
+			}
+		]
+	},
+	{
+		"name":"Fatty acids, total saturated",
+		"displayCategory":"Macro Nutrients",
+		"displayName":"Saturated fat",
+		"dv":20,
+		"priority":899
+	},
+	{
+		"name":"Cholesterol",
+		"dv":300,
+		"priority":601
+	},
+	{
+		"name":"Sodium, Na",
+		"dv":2400,
+		"priority":600
+	},
+	{
+		"name":"Potassium, K",
+		"dv":3500,
+		"priority":599
+	},
+	{
+		"name":"Carbohydrate, by difference",
+		"displayCategory":"Macro Nutrients",
+		"displayName":"Carbohydrate",
+		"dv":300,
+		"priority":922
+	},
+	{
+		"name":"Sugars, total",
+		"displayCategory":"Macro Nutrients",
+		"displayName":"Sugar",
+		"dv":30,
+		"priority":921,
+		"facts":[
+			{
+			"fact":"For food labeling purposes only monosaccharides and disaccharides are considered as sugar"
+			}
+		]
+	},
+	{
+		"name":"Fiber, total dietary",
+		"displayCategory":"Macro Nutrients",
+		"displayName":"Fiber",
+		"dv":25,
+		"priority":920
+	},
+	{
+		"name":"Protein",
+		"displayCategory":"Macro Nutrients",
+		"dv":50,
+		"priority":890
+	},
+	{
+		"name":"Vitamin A, IU",
+		"displayName":"Vitamin A",
+		"dv":5000,
+		"priority":500
+	},
+	{
+		"name":"Vitamin C, total ascorbic acid",
+		"displayName":"Vitamin C",
+		"dv":60,
+		"priority":501
+	},
+	{
+		"name":"Calcium, Ca",
+		"dv":1000,
+		"priority":499
+	},
+	{
+		"name":"Iron, Fe",
+		"dv":18,
+		"priority":498
+	},
+	{
+		"name":"Vitamin D",
+		"dv":400,
+		"priority":497
+	},
+	{
+		"name":"Vitamin E??(IU)",
+		"dv":30
+	},
+	{
+		"name":"Vitamin K (phylloquinone)",
+		"displayName":"Vitamin K",
+		"dv":80,
+		"priority":300
+	},
+	{
+		"name":"Thiamin",
+		"dv":1.5,
+		"priority":299
+	},
+	{
+		"name":"Riboflavin",
+		"dv":1.7,
+		"priority":298
+	},
+	{
+		"name":"Niacin",
+		"dv":20,
+		"priority":297
+	},
+	{
+		"name":"Vitamin B-6",
+		"dv":2,
+		"priority":497
+	},
+	{
+		"name":"Folate, total",
+		"dv":400,
+		"priority":496
+	},
+	{
+		"name":"Vitamin B-12",
+		"dv":6,
+		"priority":497
+	},
+	{
+		"name":"Biotin??(ug)",
+		"dv":300
+	},
+	{
+		"name":"Pantothenic acid",
+		"displayName":"Vitamin B-5",
+		"dv":10,
+		"priority":497,
+		"facts":[
+			{
+				"fact":"Discovered in 1933 by Roger J. Williams",
+				"url":"https://en.wikipedia.org/wiki/Roger_J._Williams"
+			}
+		]
+	},
+	{
+		"name":"Phosphorus, P",
+		"dv":1000,
+		"priority":300
+	},
+	{
+		"name":"Iodine??(ug)",
+		"dv":150
+	},
+	{
+		"name":"Magnesium, Mg",
+		"dv":400,
+		"priority":296
+	},
+	{
+		"name":"Zinc, Zn",
+		"dv":15,
+		"priority":290
+	},
+	{
+		"name":"Selenium, Se",
+		"dv":70,
+		"priority":10
+	},
+	{
+		"name":"Copper, Cu",
+		"dv":2,
+		"priority":10
+	},
+	{
+		"name":"Manganese, Mn",
+		"dv":2,
+		"priority":10
+	},
+	{
+		"name":"Water",
+		"displayCategory":"Macro Nutrients",
+		"dv":2000,
+		"priority":10
+	},
+	{
+		"name":"Fatty acids, total trans",
+		"displayCategory":"Macro Nutrients",
+		"displayName":"Trans fat",
+		"priority":898
+	},
+	{
+		"name":"Folic acid",
+		"displayName":"Vitamin B-9",
+		"dv":400,
+		"priority":497
+	},
+	{
+		"name":"Chromium??(ug)",
+		"dv":120
+	},
+	{
+		"name":"Molybdenum??(ug)",
+		"dv":75
+	},
+	{
+		"name":"Chloride??(mg)",
+		"dv":3400
+	}
+]
